@@ -1,0 +1,59 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  min-height: 32px;
+  padding: 0;
+  margin: auto;
+  border: none;
+}
+
+.menu:focus {
+  outline: none;
+}
+
+.bars {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: blue;
+  transition: 0.3s;
+}
+
+.bars::before,
+.bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.bars::before {
+  transform: translate(0, -12px);
+}
+.bars::after {
+  transform: translate(0, 12px);
+}
+
+.opened {
+  background-color: transparent;
+}
+
+.opened::before {
+  transform: rotate(45deg);
+}
+
+.opened::after {
+  transform: rotate(-45deg);
+}
